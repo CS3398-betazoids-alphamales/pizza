@@ -1,0 +1,29 @@
+<project>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac  srcdir="src/pizzaBuilder;
+                        src/pizzaDecorator;
+                        src/pizzaCommand;"
+                destdir="build/classes"
+                includeantruntime="false"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/PizzaOrderer.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="patternsexamp.PizzaOrderer"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="build/jar/PizzaOrderer.jar" fork="true"/>
+    </target>
+
+</project>
