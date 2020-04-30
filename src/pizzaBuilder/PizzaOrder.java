@@ -25,12 +25,37 @@ public class PizzaOrder{
     reportOrder();
   }
 
+  public void bakeAndrew() {
+    
+    System.out.format("Baking an AndrewPizza... \n");
+    pb = new Pizza.Builder("AndrewPizza");
+    p = pb.pizzas(5).build();
+    p.addExtras().toppings.pepperoni = true;
+    p.addExtras().toppings.capers = true;
+    p.addExtras().toppings.blackolives = true;
+    
+    reportOrder();
+  }
+
   private void reportOrder() {
-      System.out.format("\nBuilt %s - num pies: %d, pepperoni: %b, onion: %b, frenchfries %b\n", 
+    
+    if ( p.getName() == "AndrewPizza" ) {
+      System.out.format("\nBuilt %s - num pies: %d, pepperoni: %b, capers: %b, blackolives %b\n",
+      p.getName(),  
+      p.getNumber(),
+      p.toppings.pepperoni,
+      p.toppings.capers,
+      p.toppings.blackolives );
+    }
+      
+    else {
+      System.out.format("\nBuilt %s - num pies: %d, pepperoni: %b, onion: %b, frenchfries %b\n",
     	p.getName(),  
       p.getNumber(),
       p.toppings.pepperoni,
       p.toppings.onion,
       p.toppings.frenchfries );
+    }
+      
   }
 }
