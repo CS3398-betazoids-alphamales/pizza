@@ -22,5 +22,5 @@ jobs:
     - run: ant -noinput -buildfile build.xml
     - uses: action/upload-artifact@v1
       with:
-        name: PizzaOrderer
+        name: Package
         path: build/jar
