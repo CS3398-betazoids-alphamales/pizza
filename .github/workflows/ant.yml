@@ -18,5 +18,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Ant
+    - name: Clean
+      run: ant clean
+    - name: Compile
+      run: ant compile
+    - name: Build and Run
       run: ant -noinput -buildfile build.xml jar run
