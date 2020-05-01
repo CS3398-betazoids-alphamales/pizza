@@ -20,6 +20,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Clean previous
-      run: and clean
+      run: ant clean
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml jar run
