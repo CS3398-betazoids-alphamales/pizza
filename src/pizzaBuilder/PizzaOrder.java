@@ -46,7 +46,7 @@ public class PizzaOrder{
   public void bakeEvanPizza(){
     System.out.format("Baking Evan's Pizza... \n");
     pb = new Pizza.Builder("Evan's Pizza");
-    p = pb.pizzas(1).build();
+    p = pb.pizzas(2).build();
     p.addExtras().toppings.pepperoni = true;
     reportOrder();
 }
