@@ -12,6 +12,7 @@ public class PizzaOrderer{
     PizzaOrder order = new PizzaOrder();
     PizzaCommand deepDish = new DeepDishCommand(order);
     PizzaCommand thinCrust = new ThinCrustCommand(order);
+    PizzaCommand jonathanPizza = new JonathanPizzaCommand(order);
     // Order a deep Dish pizza
     control.setCommand(deepDish);
     control.submitOrder();
@@ -19,5 +20,10 @@ public class PizzaOrderer{
     // Order a thinCrust pizza
     control.setCommand(thinCrust);
     control.submitOrder();
+
+    // Order a jonathanPizza pizza
+    control.setCommand(jonathanPizza);
+    control.submitOrder();
+
   }
 }
