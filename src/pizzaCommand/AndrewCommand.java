@@ -5,7 +5,6 @@ import java.awt.event.*;  // Using AWT event classes and listener interfaces
 
 // Using Command Design Patttern (code based on DZone Command Pattern)
 
-
 //Concrete Command
 public class AndrewCommand implements PizzaCommand{
 
