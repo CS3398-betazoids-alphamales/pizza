@@ -45,6 +45,16 @@ public class PizzaOrder{
     reportOrder();
 }
 
+  public void bakeBenPizza(){
+    System.out.format("Baking Ben's Pizza... \n");
+    pb = new Pizza.Builder("Ben's Yummy Pizza");
+    p = pb.pizzas(3).build();
+    p.addExtras().toppings.pepperoni = true;
+    p.addExtras().toppings.blackolives = true;
+    p.addExtras().toppings.frenchfries = true;
+    reportOrder();
+  }
+
   private void reportOrder() {
     
     if ( p.getName() == "AndrewPizza" ) {
@@ -62,7 +72,9 @@ public class PizzaOrder{
       p.getNumber(),
       p.toppings.pepperoni,
       p.toppings.onion,
-      p.toppings.frenchfries );
+      p.toppings.frenchfries,
+      p.toppings.blackolives,
+      p.toppings.capers );
     }
       
   }
